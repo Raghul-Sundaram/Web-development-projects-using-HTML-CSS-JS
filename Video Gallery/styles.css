@@ -1,0 +1,138 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+body {
+    background-color: brown;
+    overflow-y: hidden;
+    overflow-x:hidden ;
+    
+}
+.heading {
+    font-size: 3em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    color: cornsilk;
+    text-shadow: 2px teal;
+}
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: brown;
+    
+}
+.play-video {
+    position: absolute;
+    height: auto;
+    width: 50%;
+    
+    margin: 2em;
+    
+    
+}
+.play-video video {
+    border: 2px solid black;
+    border-radius: 2em;
+    box-shadow: 0 4px 8px 0 rgb(221, 213, 213), 0 6px 20px 0 rgb(55, 168, 233);
+}
+video {
+    height: 100%;
+    width: 100%;
+    border-radius: 2em;
+    
+
+}
+.title {
+    font-size: 2em;
+    padding: 1em;
+    color: aliceblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.video-list {
+    width: 40%;
+    height: 85vh;
+    background-color: rgb(211, 85, 85);
+    position: absolute;
+    right: 0;
+    margin: 2em;
+    border: 2px solid black;
+    border-radius: 2em;
+    display: grid;
+    gap: 5px;
+    overflow-y: scroll;
+}
+.video-list::-webkit-scrollbar{
+    width: 10px;
+    height: fit-content;
+}
+.video-list::-webkit-scrollbar-track {
+    background: rgb(53, 3, 1);
+    border-radius: 2em;
+}
+.video-list::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 2em;
+    height: 10px;
+}
+.video-list::-webkit-scrollbar-thumb:hover {
+    background: rgb(121, 96, 96);
+}
+
+.video-list .vid {
+    width: 100%;
+    height: 100px;
+    background-color: rgb(134, 10, 41);
+    border: 2px solid black;
+    border-radius: 2em;
+    cursor: pointer;
+    color: aliceblue;
+}
+.video-list .vid video {
+    width: 30%;
+    height: 80%;
+    margin-top: 0.5em;
+    margin-left: 0.5em;
+    border-radius: 20px;
+}
+.video-list .vid p {
+   display:inline-block;
+   position: relative;
+   bottom: 30px;
+   font-size: 2em;
+
+   
+}
+.video-list .active {
+    background-color: green;
+}
+
+@media only screen and (max-width: 600px) {
+    .play-video {
+        position:relative;
+        height: auto;
+        width: 90%;
+    }
+    .video-list {
+        
+    width: 90%;
+    position: relative;
+    top: 0;
+    height: 100%;
+    background-color: rgb(211, 85, 85);
+    display: flex;
+    margin: 2em;
+    border: 2px solid black;
+    border-radius: 2em;
+    display: grid;
+    gap: 5px;
+    overflow-y: scroll;
+    }
+    body {
+        background-color: brown;
+        overflow-y:scroll;
+        overflow-x:hidden ;
+        
+    }
+}
